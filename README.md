@@ -1,2 +1,2 @@
 # llm-base-train
-training an llm from scratch
+training a bigram large language model from scratch on some text corpus - books gathered from projectguteneberg
