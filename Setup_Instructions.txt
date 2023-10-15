@@ -1,0 +1,12 @@
+
+
+1. Create a new cuda conda env
+2. Activate it
+	cuda\scripts\activate
+
+3. Install required libraries
+	pip3 install matplotlib numpy pylzma ipykernel
+	pip3 install torch  --index-url https://download.pytorch.org/whl/cu118
+
+4. Create a new cuda based kernel to be used in notebook
+	
