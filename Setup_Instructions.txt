@@ -1,12 +1,23 @@
-
+0. Create a project folder
+	mkdir llm-base-train
 
 1. Create a new cuda conda env
+	python -m venv cuda
+
 2. Activate it
 	cuda\scripts\activate
 
 3. Install required libraries
 	pip3 install matplotlib numpy pylzma ipykernel
 	pip3 install torch  --index-url https://download.pytorch.org/whl/cu118
+Note: installing pylzma will throw a build error probably, because of visual studio build tools, so follow the steps:
+	a. Downmload build tools from - https://visualstudio.microsoft.com/visual-cpp-build-tools/
+	b. Install it, modify the workloads to select "Desktop development in C++", ".NET desktop build tools" and " Universal Windows Platform Build tools"
+	c. Once done - pips3 install pylzma
+	d. continues installing torch, using command from - https://pytorch.org/get-started/locally/
 
 4. Create a new cuda based kernel to be used in notebook
+	python -m ipykernel install --user --name=cuda --display-name='-cuda-gpt'
+
+5. Now you'll be able to select the new created kernel in jupyter notebook
 	
